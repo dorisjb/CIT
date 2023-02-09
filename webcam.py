@@ -9,8 +9,10 @@ while True:
 	print("time is " + str(cur_time))
 	
 	ret, frame = vc.read()
+	
 	cv2.imshow("video", frame)
 	
 	if cv2.waitKey(1) & 0xFF == ord('s'):
 		print("capturing")
-		cv2.imwrite('image,jpg', frame)
+		cv2.imwrite('image.jpg', frame)
+		break

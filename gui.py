@@ -7,17 +7,17 @@ UI = 'webcam.ui'
 
 class Dialog(QDialog):
     def __init__(self):
-        super.__init__()
+        super().__init__()
         uic.loadUi(UI, self)
         self.setting()
 
-        def setting(self):
-            self.webcam.clicked.connect(self.webcam0)
+    def setting(self):
+        self.webcam.clicked.connect(self.webcam0)
 
-        def webcam0(self):
-            os.system("python3 webcam.py")
+    def webcam0(self):
+        os.system("python3 webcam.py")
 
 app = QApplication(sys.argv)
 ex = Dialog()
 ex.show()
-sys.exit(app.exec_0)
+sys.exit(app.exec_())
